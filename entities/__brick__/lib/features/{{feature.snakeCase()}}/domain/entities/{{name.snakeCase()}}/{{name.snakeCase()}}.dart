@@ -1,13 +1,20 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+///
+/// {{name.snakeCase()}}.dart
+/// lib/features/{{feature.snakeCase()}}/domain/entities
+/// 
+/// Created by Indra Mahesa https://github.com/zinct
+/// 
 
-part '{{name.snakeCase()}}.freezed.dart';
+import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
+
 part '{{name.snakeCase()}}.g.dart';
 
-@freezed
-class {{name.pascalCase()}} with _${{name.pascalCase()}} {
-  const factory {{name.pascalCase()}}({
-  }) = _{{name.pascalCase()}};
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+class {{name.pascalCase()}} extends Equatable {
 
-  factory {{name.pascalCase()}}.fromJson(Map<String, Object?> json) =>
+  factory {{name.pascalCase()}}.fromJson(Map<String, dynamic> json) =>
       _${{name.pascalCase()}}FromJson(json);
+
+  Map<String, dynamic> toJson() => _${{name.pascalCase()}}ToJson(this);
 }
