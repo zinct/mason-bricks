@@ -35,3 +35,8 @@ vars:
     description: Your feature
     default: Dash
     prompt: What is your feature name?
+  single:
+    type: boolean
+    description: choose between using with single class or multiple class
+    default: true
+    prompt: Is your cubit using single class?

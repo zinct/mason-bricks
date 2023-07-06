@@ -7,6 +7,20 @@
 
 part of '{{name.snakeCase()}}_cubit.dart';
 
+{{#single}}
+@freezed
+sealed class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
+  const factory {{name.pascalCase()}}State({
+    //
+  }) = _{{name.pascalCase()}}State;
+
+  factory {{name.pascalCase()}}State.initial() => {{name.pascalCase()}}State(
+    //
+  );
+}
+{{/single}}
+
+{{^single}}
 @immutable
 abstract class {{name.pascalCase()}}State {}
 
@@ -25,3 +39,5 @@ class {{name.pascalCase()}}SuccessState extends {{name.pascalCase()}}State {
 
   {{name.pascalCase()}}SuccessState(this.data);
 }
+{{/single}}
+
