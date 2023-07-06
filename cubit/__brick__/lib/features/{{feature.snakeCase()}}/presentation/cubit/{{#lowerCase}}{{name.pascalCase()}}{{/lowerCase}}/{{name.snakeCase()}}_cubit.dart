@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
 
 part '{{name.snakeCase()}}_state.dart';
+{{#single}}part '{{name.snakeCase()}}_cubit.freezed.dart';{{/single}}
 
 class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> {
   {{name.pascalCase()}}Cubit() : super({{name.pascalCase()}}InitialState());
