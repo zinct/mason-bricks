@@ -5,8 +5,8 @@
 /// Created by Indra Mahesa https://github.com/zinct
 ///
 
-import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
+{{#single}}import 'package:freezed_annotation/freezed_annotation.dart';{{/single}}
 
 part '{{name.snakeCase()}}_state.dart';
 {{#single}}part '{{name.snakeCase()}}_cubit.freezed.dart';{{/single}}
