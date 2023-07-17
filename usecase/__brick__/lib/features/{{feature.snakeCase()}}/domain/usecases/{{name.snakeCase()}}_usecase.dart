@@ -19,7 +19,7 @@ final class {{name.pascalCase()}}UseCase extends UseCase<bool, {{name.pascalCase
 
   @override
   Future<Either<Failure, bool>> call({{name.pascalCase()}}Params params) =>
-      _repository.login(params.email, params.password);
+      _repository.login(params.data);
 }
 
 class {{name.pascalCase()}}Params extends Equatable {
@@ -28,5 +28,5 @@ class {{name.pascalCase()}}Params extends Equatable {
   const {{name.pascalCase()}}Params(this.data);
 
   @override
-  List<Object?> get props => [email];
+  List<Object?> get props => [data];
 }
