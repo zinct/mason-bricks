@@ -9,8 +9,8 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '{{name.snakeCase()}}.g.dart';
-part '{{name.snakeCase()}}.freezed.dart';
+part '{{name.snakeCase()}}_entity.g.dart';
+part '{{name.snakeCase()}}_entity.freezed.dart';
 
 @freezed
 sealed class {{name.pascalCase()}}Entity with _${{name.pascalCase()}}Entity {
