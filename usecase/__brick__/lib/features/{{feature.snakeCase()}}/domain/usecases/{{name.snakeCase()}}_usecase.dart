@@ -10,10 +10,10 @@ import 'package:equatable/equatable.dart';
 
 import '../../../../core/errors/errors.dart';
 import '../../../../core/usecase/usecase.dart';
-import '../repositories/{{name.snakeCase()}}_repository.dart';
+import '../repositories/{{feature.snakeCase()}}_repository.dart';
 
 final class {{name.pascalCase()}}UseCase extends UseCase<bool, {{name.pascalCase()}}Params> {
-  final {{name.pascalCase()}}Repository _repository;
+  final {{feature.pascalCase()}}Repository _repository;
 
   {{name.pascalCase()}}UseCase(this._repository);
 
