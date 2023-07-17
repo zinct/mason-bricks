@@ -5,16 +5,17 @@
 /// Created by Indra Mahesa https://github.com/zinct
 /// 
 
-import 'package:equatable/equatable.dart';
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part '{{name.snakeCase()}}.g.dart';
+part '{{name.snakeCase()}}.freezed.dart';
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
-class {{name.pascalCase()}} extends Equatable {
+@freezed
+sealed class {{name.pascalCase()}} with _${{name.pascalCase()}} {
+  const factory {{name.pascalCase()}}({
+    int? id,
+  }) = _{{name.pascalCase()}};
 
   factory {{name.pascalCase()}}.fromJson(Map<String, dynamic> json) =>
       _${{name.pascalCase()}}FromJson(json);
-
-  Map<String, dynamic> toJson() => _${{name.pascalCase()}}ToJson(this);
 }
