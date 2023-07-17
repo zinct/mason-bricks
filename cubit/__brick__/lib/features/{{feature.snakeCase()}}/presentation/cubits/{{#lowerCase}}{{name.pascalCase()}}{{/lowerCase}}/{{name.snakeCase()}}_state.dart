@@ -1,6 +1,6 @@
 ///
 /// {{name.snakeCase()}}_state.dart
-/// lib/features/{{feature.snakeCase()}}/presentation/cubit/{{name.snakeCase()}}
+/// lib/features/{{feature.snakeCase()}}/presentation/cubits/{{name.snakeCase()}}
 ///
 /// Created by Indra Mahesa https://github.com/zinct
 ///
@@ -31,18 +31,18 @@ sealed class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
 
 {{^single}}
 @freezed
-class PostsListState with _$PostsListState {
-  const factory PostsListState.initial() = _PostListStateInitial;
+class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
+  const factory {{name.pascalCase()}}State.initial() = _{{name.pascalCase()}}StateInitial;
   
-  const factory PostsListState.loading() = _PostListStateLoading;
+  const factory {{name.pascalCase()}}State.loading() = _{{name.pascalCase()}}StateLoading;
 
-  const factory PostsListState.success({
+  const factory {{name.pascalCase()}}State.success({
     required dynamic data,
-  }) = _PostListStateSuccess;
+  }) = _{{name.pascalCase()}}StateSuccess;
 
-  const factory PostsListState.error({
-  }) = _PostListStateError;
+  const factory {{name.pascalCase()}}State.error({
     required Failure failure,
+  }) = _{{name.pascalCase()}}StateError;
 }
 {{/single}}
 

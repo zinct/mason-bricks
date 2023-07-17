@@ -1,6 +1,6 @@
 ///
 /// {{name.snakeCase()}}_cubit.dart
-/// lib/features/{{feature.snakeCase()}}/presentation/cubit/{{name.snakeCase()}}
+/// lib/features/{{feature.snakeCase()}}/presentation/cubits/{{name.snakeCase()}}
 ///
 /// Created by Indra Mahesa https://github.com/zinct
 ///
