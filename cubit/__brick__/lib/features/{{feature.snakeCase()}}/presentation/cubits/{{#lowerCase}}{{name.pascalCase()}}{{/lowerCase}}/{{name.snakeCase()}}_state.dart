@@ -19,7 +19,7 @@ enum {{name.pascalCase()}}Status {
 sealed class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
   const factory {{name.pascalCase()}}State({
     required {{name.pascalCase()}}Status status,
-    required Failure failure,
+    required Failure? failure,
   }) = _{{name.pascalCase()}}State;
 
   factory {{name.pascalCase()}}State.initial() => {{name.pascalCase()}}State(
