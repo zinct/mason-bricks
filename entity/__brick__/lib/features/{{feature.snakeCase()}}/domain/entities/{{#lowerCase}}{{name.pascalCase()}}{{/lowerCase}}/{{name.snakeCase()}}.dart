@@ -11,7 +11,7 @@ part '{{name.snakeCase()}}.g.dart';
 part '{{name.snakeCase()}}.freezed.dart';
 
 @freezed
-sealed class {{name.pascalCase()}}Entity with _${{name.pascalCase()}} {
+sealed class {{name.pascalCase()}}Entity with _${{name.pascalCase()}}Entity {
   const factory {{name.pascalCase()}}Entity({
     int? id,
   }) = _{{name.pascalCase()}}Entity;
