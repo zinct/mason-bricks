@@ -21,23 +21,19 @@ sealed class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
 {{/single}}
 
 {{^single}}
-@immutable
-abstract class {{name.pascalCase()}}State {}
+@freezed
+class PostsListState with _$PostsListState {
+  const factory PostsListState.initial() = _PostListStateInitial;
+  
+  const factory PostsListState.loading() = _PostListStateLoading;
 
-class {{name.pascalCase()}}InitialState extends {{name.pascalCase()}}State {}
+  const factory PostsListState.success({
+    required dynamic data,
+  }) = _PostListStateSuccess;
 
-class {{name.pascalCase()}}LoadingState extends {{name.pascalCase()}}State {}
-
-class {{name.pascalCase()}}ErrorState extends {{name.pascalCase()}}State {
-  final String? message;
-
-  {{name.pascalCase()}}ErrorState(this.message);
-}
-
-class {{name.pascalCase()}}SuccessState extends {{name.pascalCase()}}State {
-  final data;
-
-  {{name.pascalCase()}}SuccessState(this.data);
+  const factory PostsListState.error({
+  }) = _PostListStateError;
+    required Failure failure,
 }
 {{/single}}
 
