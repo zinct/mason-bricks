@@ -19,7 +19,7 @@ final class {{name.pascalCase()}}UseCase extends UseCase<bool, {{name.pascalCase
 
   @override
   Future<Either<Failure, bool>> call({{name.pascalCase()}}Params params) =>
-      _repository.login(params.data);
+      _repository.getData(params.data);
 }
 
 class {{name.pascalCase()}}Params extends Equatable {
