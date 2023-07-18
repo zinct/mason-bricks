@@ -1,5 +1,5 @@
 ///
-/// {{name.snakeCase()}}_state.dart
+/// {{name.snakeCase()}}_usecase.dart
 /// lib/features/{{feature.snakeCase()}}/domain/usecases
 ///
 /// Created by Indra Mahesa https://github.com/zinct
@@ -19,7 +19,7 @@ final class {{name.pascalCase()}}UseCase extends UseCase<bool, {{name.pascalCase
 
   @override
   Future<Either<Failure, bool>> call({{name.pascalCase()}}Params params) =>
-      _repository.getData(params.data);
+      _repository.getData();
 }
 
 class {{name.pascalCase()}}Params extends Equatable {
