@@ -24,7 +24,7 @@ sealed class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
 
   factory {{name.pascalCase()}}State.initial() => const {{name.pascalCase()}}State(
     status: {{name.pascalCase()}}Status.initial,
-    failure: null,
+    error: null,
   );
 }
 {{/single}}
