@@ -25,7 +25,7 @@ final class {{name.pascalCase()}}UseCase extends UseCase<bool, {{name.pascalCase
 class {{name.pascalCase()}}Params extends Equatable {
   final String data;
 
-  const {{name.pascalCase()}}Params(this.data);
+  const {{name.pascalCase()}}Params({this.data});
 
   @override
   List<Object?> get props => [data];

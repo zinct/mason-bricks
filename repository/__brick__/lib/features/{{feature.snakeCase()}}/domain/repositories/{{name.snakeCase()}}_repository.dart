@@ -7,8 +7,6 @@
 
 import 'package:dartz/dartz.dart';
 
-import '../../../../core/errors/failure.dart';
+import '../../../../core/errors/errors.dart';
 
-abstract class {{name.pascalCase()}}Repository {
-  // Future<Either<Failure, Entity>> getData();
-}
+abstract class {{name.pascalCase()}}Repository {}

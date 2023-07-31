@@ -7,7 +7,7 @@
 
 import 'package:dio/dio.dart';
 
-import '../../../../core/api.dart';
+import '../../../../core/api/api.dart';
 
 abstract class {{name.pascalCase()}}RemoteDataSource {}
 
