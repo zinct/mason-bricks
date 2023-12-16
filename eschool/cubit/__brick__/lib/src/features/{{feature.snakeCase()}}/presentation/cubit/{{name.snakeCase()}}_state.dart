@@ -12,12 +12,10 @@ enum {{name.pascalCase()}}Status {
 sealed class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
   const factory {{name.pascalCase()}}State({
     required {{name.pascalCase()}}Status status,
-    required ErrorObject? error,
   }) = _{{name.pascalCase()}}State;
 
   factory {{name.pascalCase()}}State.initial() => const {{name.pascalCase()}}State(
     status: {{name.pascalCase()}}Status.initial,
-    error: null,
   );
 }
 {{/single}}
